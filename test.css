@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+   background-color: rgba(147, 84, 47, 0.783);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.board{
+   margin: 50px auto;
+   padding: 10px;
+  max-width: 600px;
+   border: 1px solid rgba(0, 0, 0, 0.674);
+   border-radius: 20px;
+}
+.board .resualt{
+   display: flex;
+   justify-content: center;
+}
+.board .resualt .x,
+.board .resualt .o{
+border: 1px solid rgb(0, 0, 0);
+border-bottom: none;
+margin:5px;
+padding: 10px;
+width: 250px;
+display: flex;
+justify-content: space-between;
+font-size: 25px;
+}
+.items{
+   display: grid;
+   grid-template-columns:repeat(3 , 1fr);
+}
+.board .items div{
+   border: 1px solid black;
+   padding: 40px;
+   margin: 5px;
+   background-color: cadetblue;
+   font-size: 30px;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.board .items div:hover {
+   background-color: #ccc;
+   color: darkcyan;
+   transform: scale(1.05); /* لتكبير العنصر عند التفاعل */
+   transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.finaly{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 40px;
+transition: 2s;
+z-index: 9999;
+background-color: black;
+color: white;
+padding: 20px;
+border-radius: 10px;
+}
+.score{
+   display: flex;
+   justify-content: center;
+}
+.score input{
+   border: none;
+   border-radius: 5px;
+}
+.score input:focus{
+   outline: none;
+}
+.score span{
+   font-size: 20px;
+}
+@media (max-width: 768px) {
+   .board {
+      margin: 15px;
+   }
+   .board .items div {
+      padding: 30px;
+      font-size: 25px;
+   }
+   .finaly {
+      padding: 10px;
+      font-size: 25px;
+   }
+}
